@@ -18,6 +18,7 @@ app.get("/", function(req, resp) {
 });
 
 app.post("/newtodo", function(req, resp) {
+  log("incoming on /newtodo");
   var title = req.body.title;
 
   TodoModel.create({title: title}).then(function(res) {
